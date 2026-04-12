@@ -16,13 +16,18 @@ const galleryItems: { src: string; label: string; type: "image" | "video" }[] = 
   { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1774319240/WhatsApp_Image_2026-03-09_at_19.31.05_nsj6cx.jpg", label: "Live @ The Bitter End w/ Richie Cannata 2023", type: "image" },
   { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1774319240/IMG_0260_rma2n7.jpg", label: "School of Rock the Musical, 2018", type: "image" },
   { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1774319240/WhatsApp_Image_2026-03-09_at_19.28.37_tbmmot.jpg", label: "", type: "image" },
+  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1776006975/IMG_1614_zoav30.jpg", label: "Blueshade @ Bob & Barbs, March 2026", type: "image" },
+  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1776006975/IMG_1612_ob6izw.jpg", label: "Blueshade @ Bob & Barbs, March 2026", type: "image" },
+  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1776007833/2026_03_14_-_RendezVous_club77_x_visionseven_116_dqwzvu.jpg", label: "Live Guitar & DJ Set @ 77 London w/ Rendezvous", type: "image" },
+  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1776007834/2026_03_14_-_RendezVous_club77_x_visionseven_120_c6ttqd.jpg", label: "Live Guitar & DJ Set @ 77 London w/ Rendezvous", type: "image" },
+  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1776007835/2026_03_14_-_RendezVous_club77_x_visionseven_141_xaync0.jpg", label: "Live Guitar & DJ Set @ 77 London w/ Rendezvous", type: "image" },
+  { src: "https://res.cloudinary.com/dxv6sw1ce/video/upload/v1776008150/Tiamo_Mote_Apr_20_2010_g2zzn5.mp4", label: "Live Guitar & DJ Set @ 77 London w/ Rendezvous", type: "video" },
+  { src: "https://res.cloudinary.com/dxv6sw1ce/video/upload/v1776008150/Tiamo_Mote_04.01.44_psfmdb.mp4", label: "Live Guitar & DJ Set @ 77 London w/ Rendezvous", type: "video" },
 ];
 
 export default function Gallery() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const paused = hoveredIndex !== null;
-
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
@@ -32,19 +37,17 @@ export default function Gallery() {
     const speed = 0.5;
 
     const scroll = () => {
-      if (!paused) {
-        scrollPos += speed;
-        if (scrollPos >= el.scrollWidth / 2) {
-          scrollPos = 0;
-        }
-        el.scrollLeft = scrollPos;
+      scrollPos += speed;
+      if (scrollPos >= el.scrollWidth / 2) {
+        scrollPos = 0;
       }
+      el.scrollLeft = scrollPos;
       animationId = requestAnimationFrame(scroll);
     };
 
     animationId = requestAnimationFrame(scroll);
     return () => cancelAnimationFrame(animationId);
-  }, [paused]);
+  }, []);
 
   const allItems = [...galleryItems, ...galleryItems];
 
