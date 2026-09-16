@@ -38,7 +38,7 @@ export default function About() {
         {/* Right — Paragraph (desktop only) */}
         <div className="hidden lg:block max-w-md text-right">
           <p className="text-base leading-relaxed text-foreground-secondary">
-            Now based in Philadelphia, he splits time between BlueShade, a
+            Now based in Philadelphia, he splits time between Something Blue, a
             live band playing venues across New York and Philly, and his own
             solo work layering live guitar over electronic production. In 2024
             he co-founded Knossos Music. The label exists for the stuff that
@@ -48,7 +48,7 @@ export default function About() {
 
         {/* Mobile-only — second paragraph */}
         <p className="lg:hidden mt-3 text-base leading-relaxed text-foreground-secondary max-w-md">
-          Now based in Philadelphia, he splits time between BlueShade, a
+          Now based in Philadelphia, he splits time between Something Blue, a
           live band playing venues across New York and Philly, and his own
           solo work layering live guitar over electronic production. In 2024
           he co-founded Knossos Music. The label exists for the stuff that
