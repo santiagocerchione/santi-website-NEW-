@@ -25,11 +25,11 @@ export default function About() {
               Upcoming Events
             </h3>
             <div className="mt-2 flex flex-col gap-3 text-xs font-medium uppercase tracking-widest leading-relaxed text-foreground-secondary">
-              <a href="https://www.thebeechman.com/events/lbt25-Ahmed-Alsibai" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
-                17 April: Live in NYC at The Laurie Beechman Theatre with BlueShade and Ahmed Alsibai
+              <a href="#" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
+                10 October: Something Blue at SoHo Live, New York
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
-                18 April: WIP NYC w/ Jivan Calderone and Max Stipanovich
+                6 November: Something Blue at Arlene&apos;s Grocery, New York
               </a>
             </div>
           </div>
@@ -61,11 +61,11 @@ export default function About() {
             Upcoming Events
           </h3>
           <div className="mt-2 flex flex-col gap-3 text-xs font-medium uppercase tracking-widest leading-relaxed text-foreground-secondary">
-            <a href="https://www.thebeechman.com/events/lbt25-Ahmed-Alsibai" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
-              17 April: Live in NYC at The Laurie Beechman Theatre with BlueShade and Ahmed Alsibai
+            <a href="#" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
+              10 October: Something Blue at SoHo Live, New York
             </a>
             <a href="#" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
-              18 April: WIP NYC w/ Jivan Calderone and Max Stipanovich
+              6 November: Something Blue at Arlene&apos;s Grocery, New York
             </a>
           </div>
         </div>
