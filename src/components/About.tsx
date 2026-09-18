@@ -25,7 +25,7 @@ export default function About() {
               Upcoming Events
             </h3>
             <div className="mt-2 flex flex-col gap-3 text-xs font-medium uppercase tracking-widest leading-relaxed text-foreground-secondary">
-              <a href="https://partiful.com/e/At1KGtYFwUrumOX2ZU6K?c=1bFsBYdv" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
+              <a href="https://partiful.com/e/At1KGtYFwUrumOX2ZU6K" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
                 25 September: WIP Session 003, New York
               </a>
               <a href="https://tickets.venuepilot.com/e/breaking-sound-presents-2026-10-10-soho-live-new-york-319627" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
@@ -64,7 +64,7 @@ export default function About() {
             Upcoming Events
           </h3>
           <div className="mt-2 flex flex-col gap-3 text-xs font-medium uppercase tracking-widest leading-relaxed text-foreground-secondary">
-            <a href="https://partiful.com/e/At1KGtYFwUrumOX2ZU6K?c=1bFsBYdv" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
+            <a href="https://partiful.com/e/At1KGtYFwUrumOX2ZU6K" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
               25 September: WIP Session 003, New York
             </a>
             <a href="https://tickets.venuepilot.com/e/breaking-sound-presents-2026-10-10-soho-live-new-york-319627" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
