@@ -25,10 +25,10 @@ export default function About() {
               Upcoming Events
             </h3>
             <div className="mt-2 flex flex-col gap-3 text-xs font-medium uppercase tracking-widest leading-relaxed text-foreground-secondary">
-              <a href="#" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
+              <a href="https://tickets.venuepilot.com/e/breaking-sound-presents-2026-10-10-soho-live-new-york-319627" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
                 10 October: Something Blue at SoHo Live, New York
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
+              <a href="https://aftontickets.com/event/buyticket/l3x30n4zxd/something-blue-allison-phillips-tbd" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
                 6 November: Something Blue at Arlene&apos;s Grocery, New York
               </a>
             </div>
@@ -61,10 +61,10 @@ export default function About() {
             Upcoming Events
           </h3>
           <div className="mt-2 flex flex-col gap-3 text-xs font-medium uppercase tracking-widest leading-relaxed text-foreground-secondary">
-            <a href="#" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
+            <a href="https://tickets.venuepilot.com/e/breaking-sound-presents-2026-10-10-soho-live-new-york-319627" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
               10 October: Something Blue at SoHo Live, New York
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
+            <a href="https://aftontickets.com/event/buyticket/l3x30n4zxd/something-blue-allison-phillips-tbd" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
               6 November: Something Blue at Arlene&apos;s Grocery, New York
             </a>
           </div>
