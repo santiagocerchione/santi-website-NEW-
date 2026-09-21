@@ -12,7 +12,7 @@ interface Album {
   /** Longer title shown in the featured display; falls back to title */
   displayTitle?: string;
   artist?: string;
-  /** Direct audio URL. Unused for now: the tracks are unreleased and are not self hosted. */
+  /** Audio file served from this site, at /audio/<name>.mp3 */
   audio?: string;
   /** External link (SoundCloud, Spotify, etc.) — used when no direct audio */
   externalUrl?: string;
@@ -34,43 +34,44 @@ const albums: Album[] = [
    *   { id: "mixtape-1", src: "/gallery/my-cover.webp", title: "Mixtape Vol. 1",
    *     externalUrl: "https://soundcloud.com/..." },
    *
-   * Direct audio is deliberately unused. Unreleased masters are not served
-   * from this site. Point at a platform instead.
+   * Audio lives in the repo too, at public/audio/, encoded to mp3. The wav
+   * master never goes on the site. Drop a new bounce in
+   * Desktop/SITE PHOTOS TO ADD/ and it gets encoded and wired up.
    */
   {
     id: "album-1",
     src: "/gallery/knossos-cover.webp",
-    title: "Risible",
+    title: "Laugh & Smile",
     artist: "Santiago",
-    externalUrl: "https://soundcloud.com/scerchione",
+    audio: "/audio/laugh-and-smile.mp3",
   },
   {
     id: "album-2",
     src: "/gallery/knossos-cover.webp",
-    title: "Fire Exit",
-    artist: "Santiago, Jivan Calderone, Max Stipanovich",
-    externalUrl: "https://soundcloud.com/scerchione",
+    title: "Acidic Blues",
+    artist: "Santiago",
+    audio: "/audio/acidic-blues.mp3",
   },
   {
     id: "album-3",
     src: "/gallery/knossos-cover.webp",
-    title: "Phonic",
-    artist: "Santiago",
-    externalUrl: "https://soundcloud.com/scerchione",
+    title: "Fire Exit",
+    artist: "Santiago, Jivan Calderone, Max Stipanovich",
+    audio: "/audio/fire-exit.mp3",
   },
   {
     id: "album-4",
     src: "/gallery/knossos-cover.webp",
-    title: "Limbic",
+    title: "Phonic",
     artist: "Santiago",
-    externalUrl: "https://soundcloud.com/scerchione",
+    audio: "/audio/phonic.mp3",
   },
   {
     id: "album-5",
     src: "/gallery/knossos-cover.webp",
-    title: "Quaternary",
+    title: "Limbic",
     artist: "Santiago",
-    externalUrl: "https://soundcloud.com/scerchione",
+    audio: "/audio/limbic.mp3",
   },
 ];
 
