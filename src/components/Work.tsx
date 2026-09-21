@@ -12,7 +12,7 @@ interface Album {
   /** Longer title shown in the featured display; falls back to title */
   displayTitle?: string;
   artist?: string;
-  /** Direct audio URL (Cloudinary). Upload .wav, reference as .mp3 for auto-transcode. */
+  /** Direct audio URL. Unused for now: the tracks are unreleased and are not self hosted. */
   audio?: string;
   /** External link (SoundCloud, Spotify, etc.) — used when no direct audio */
   externalUrl?: string;
@@ -23,52 +23,54 @@ const albums: Album[] = [
   /*
    * ── HOW TO ADD ITEMS ──
    *
-   * Albums (external platforms only — no direct audio):
-   *   { id: "album-1", src: "https://res.cloudinary.com/.../cover.jpg", title: "My Album",
+   * Artwork lives in the repo, at public/gallery/. Reference it by path,
+   * never by an external URL. Nothing here is hosted off site any more.
+   *
+   * Album on streaming platforms:
+   *   { id: "album-1", src: "/gallery/my-cover.webp", title: "My Album",
    *     links: { spotify: "https://open.spotify.com/...", apple: "https://music.apple.com/...", youtube: "https://youtube.com/..." } },
    *
-   * Demos (direct .wav upload to Cloudinary — change extension to .mp3 in the URL):
-   *   { id: "demo-1", src: "https://res.cloudinary.com/.../cover.jpg", title: "Demo Track",
-   *     audio: "https://res.cloudinary.com/dxv6sw1ce/video/upload/v.../my_demo.mp3" },
-   *
-   * Mixtapes (hosted on SoundCloud):
-   *   { id: "mixtape-1", src: "https://res.cloudinary.com/.../cover.jpg", title: "Mixtape Vol. 1",
+   * Anything hosted elsewhere, SoundCloud or Bandcamp:
+   *   { id: "mixtape-1", src: "/gallery/my-cover.webp", title: "Mixtape Vol. 1",
    *     externalUrl: "https://soundcloud.com/..." },
+   *
+   * Direct audio is deliberately unused. Unreleased masters are not served
+   * from this site. Point at a platform instead.
    */
   {
     id: "album-1",
-    src: "/Knossos.JPG",
+    src: "/gallery/knossos-cover.webp",
     title: "Risible",
     artist: "Santiago",
-    audio: "https://res.cloudinary.com/dxv6sw1ce/video/upload/v1776007340/Laugh_Smile_-_Santiago_v4_MSTR_wzkxlw.wav",
+    externalUrl: "https://soundcloud.com/scerchione",
   },
   {
     id: "album-2",
-    src: "/Knossos.JPG",
+    src: "/gallery/knossos-cover.webp",
     title: "Fire Exit",
     artist: "Santiago, Jivan Calderone, Max Stipanovich",
-    audio: "https://res.cloudinary.com/dxv6sw1ce/video/upload/v1774368303/Fire_Exit_MASTER_nsk8ap.wav",
+    externalUrl: "https://soundcloud.com/scerchione",
   },
   {
     id: "album-3",
-    src: "/Knossos.JPG",
+    src: "/gallery/knossos-cover.webp",
     title: "Phonic",
     artist: "Santiago",
-    audio: "https://res.cloudinary.com/dxv6sw1ce/video/upload/v1774369045/Phonic_v3_MASTER_uqczo5.wav",
+    externalUrl: "https://soundcloud.com/scerchione",
   },
   {
     id: "album-4",
-    src: "/Knossos.JPG",
+    src: "/gallery/knossos-cover.webp",
     title: "Limbic",
     artist: "Santiago",
-    audio: "https://res.cloudinary.com/dxv6sw1ce/video/upload/v1774369548/Santiago_-_Groover_Master_bfwxkx.wav",
+    externalUrl: "https://soundcloud.com/scerchione",
   },
   {
     id: "album-5",
-    src: "/Knossos.JPG",
+    src: "/gallery/knossos-cover.webp",
     title: "Quaternary",
     artist: "Santiago",
-    audio: "https://res.cloudinary.com/dxv6sw1ce/video/upload/v1776006931/Quaternary_tf0oyn.mp3",
+    externalUrl: "https://soundcloud.com/scerchione",
   },
 ];
 
@@ -191,7 +193,7 @@ export default function Work() {
   return (
     <section id="work" className="relative min-h-screen lg:h-screen px-4 lg:px-6 pt-8 pb-8 flex flex-col items-center lg:flex-row lg:items-stretch overflow-hidden" style={{ background: "#1a1a1a" }}>
       {/* Hidden audio element */}
-      <audio ref={audioRef} preload="auto" />
+      <audio ref={audioRef} preload="none" />
 
       {/* Top-left — secondary text (desktop only) */}
       <p className="hidden lg:block absolute top-8 left-6 max-w-sm text-base leading-relaxed text-neutral-400">

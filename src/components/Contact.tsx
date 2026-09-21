@@ -3,15 +3,15 @@
 import { useState } from "react";
 
 const polaroids = [
-  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1774319369/IMG_0324_bnc6b2.jpg", alt: "Polaroid 1", rotation: -7 },
-  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1774319281/IMG_0847_zmimfq.jpg", alt: "Polaroid 2", rotation: 3 },
-  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1774319242/_P1A9944_Original_2_flhcmx.jpg", alt: "Polaroid 3", rotation: -2 },
-  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1774319369/IMG_0316_fgpenw.jpg", alt: "Polaroid 4", rotation: 5 },
-  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1774319243/IMG_0863_yrjrxe.jpg", alt: "Polaroid 5", rotation: -4 },
-  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1774319242/WhatsApp_Image_2026-03-09_at_19.29.59_pufmrm.jpg", alt: "Polaroid 6", rotation: 2 },
-  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1774319240/WhatsApp_Image_2026-03-09_at_19.31.05_nsj6cx.jpg", alt: "Polaroid 7", rotation: -5 },
-  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1774319240/IMG_0260_rma2n7.jpg", alt: "Polaroid 8", rotation: 4 },
-  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1774319240/WhatsApp_Image_2026-03-09_at_19.28.37_tbmmot.jpg", alt: "Polaroid 9", rotation: -3 },
+  { src: "/gallery/theata-london-01.webp", alt: "Polaroid 1", rotation: -7 },
+  { src: "/gallery/how-matcha-2026.webp", alt: "Polaroid 2", rotation: 3 },
+  { src: "/gallery/city-winery-2025-01.webp", alt: "Polaroid 3", rotation: -2 },
+  { src: "/gallery/theata-london-02.webp", alt: "Polaroid 4", rotation: 5 },
+  { src: "/gallery/jivan-calderone-ibiza-2025.webp", alt: "Polaroid 5", rotation: -4 },
+  { src: "/gallery/city-winery-2025-02.webp", alt: "Polaroid 6", rotation: 2 },
+  { src: "/gallery/bitter-end-2023.webp", alt: "Polaroid 7", rotation: -5 },
+  { src: "/gallery/school-of-rock-2018.webp", alt: "Polaroid 8", rotation: 4 },
+  { src: "/gallery/archive-01.webp", alt: "Polaroid 9", rotation: -3 },
 ];
 
 const links = [

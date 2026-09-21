@@ -18,6 +18,7 @@ interface GalleryImageProps {
   src: string;
   label: string;
   type?: "image" | "video";
+  poster?: string;
   isHovered?: boolean;
   onMouseEnter: () => void;
   onMouseLeave: () => void;
@@ -27,6 +28,7 @@ export default function GalleryImage({
   src,
   label,
   type = "image",
+  poster,
   isHovered = false,
   onMouseEnter,
   onMouseLeave,
@@ -65,6 +67,8 @@ export default function GalleryImage({
         <video
           ref={videoRef}
           src={src}
+          poster={poster}
+          preload="none"
           autoPlay
           muted
           loop

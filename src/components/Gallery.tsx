@@ -3,26 +3,34 @@
 import { useEffect, useRef, useState } from "react";
 import GalleryImage from "./GalleryImage";
 
-const galleryItems: { src: string; label: string; type: "image" | "video" }[] = [
-  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1774319369/IMG_0324_bnc6b2.jpg", label: "Live at 'THEATA' London", type: "image" },
-  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1774319369/IMG_0316_fgpenw.jpg", label: "Live at 'THEATA' London", type: "image" },
-  { src: "https://res.cloudinary.com/dxv6sw1ce/video/upload/v1774319426/250702_Clip_2_v1_iyvojg.mp4", label: "Knossos 'POLIS' @ B London 2025", type: "video" },
-  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1774319281/IMG_0847_zmimfq.jpg", label: "Live @ How Matcha 2026", type: "image" },
-  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1774319243/IMG_0863_yrjrxe.jpg", label: "Santiago & Jivan Calderone, Ibiza 2025", type: "image" },
-  { src: "https://res.cloudinary.com/dxv6sw1ce/video/upload/v1774319312/Santi_Clip_1_v1_puuvs8.mp4", label: "Knossos 'APHRODITE' @ Gallery 2025", type: "video" },
-  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1774319242/_P1A9944_Original_2_flhcmx.jpg", label: "Something Blue @ City Winery 2025", type: "image" },
-  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1774319242/WhatsApp_Image_2026-03-09_at_19.29.59_pufmrm.jpg", label: "Something Blue @ City Winery 2025", type: "image" },
-  { src: "https://res.cloudinary.com/dxv6sw1ce/video/upload/v1774319269/CANVAS_GUITAR_SOLO_INSTA_jlsbgz.mp4", label: "Canvas Guitar Solo", type: "video" },
-  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1774319240/WhatsApp_Image_2026-03-09_at_19.31.05_nsj6cx.jpg", label: "Live @ The Bitter End w/ Richie Cannata 2023", type: "image" },
-  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1774319240/IMG_0260_rma2n7.jpg", label: "School of Rock the Musical, 2018", type: "image" },
-  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1774319240/WhatsApp_Image_2026-03-09_at_19.28.37_tbmmot.jpg", label: "", type: "image" },
-  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1776006975/IMG_1614_zoav30.jpg", label: "Something Blue @ Bob & Barbs, March 2026", type: "image" },
-  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1776006975/IMG_1612_ob6izw.jpg", label: "Something Blue @ Bob & Barbs, March 2026", type: "image" },
-  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1776007833/2026_03_14_-_RendezVous_club77_x_visionseven_116_dqwzvu.jpg", label: "Live Guitar & DJ Set @ 77 London w/ Rendezvous", type: "image" },
-  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1776007834/2026_03_14_-_RendezVous_club77_x_visionseven_120_c6ttqd.jpg", label: "Live Guitar & DJ Set @ 77 London w/ Rendezvous", type: "image" },
-  { src: "https://res.cloudinary.com/dxv6sw1ce/image/upload/v1776007835/2026_03_14_-_RendezVous_club77_x_visionseven_141_xaync0.jpg", label: "Live Guitar & DJ Set @ 77 London w/ Rendezvous", type: "image" },
-  { src: "https://res.cloudinary.com/dxv6sw1ce/video/upload/v1776008150/Tiamo_Mote_Apr_20_2010_g2zzn5.mp4", label: "Live Guitar & DJ Set @ 77 London w/ Rendezvous", type: "video" },
-  { src: "https://res.cloudinary.com/dxv6sw1ce/video/upload/v1776008150/Tiamo_Mote_04.01.44_psfmdb.mp4", label: "Live Guitar & DJ Set @ 77 London w/ Rendezvous", type: "video" },
+const galleryItems: { src: string; label: string; type: "image" | "video"; poster?: string }[] = [
+  { src: "/gallery/soho-live-2026-01.webp", label: "Something Blue @ Soho Live, August 2026", type: "image" },
+  { src: "/gallery/theata-london-01.webp", label: "Live at 'THEATA' London", type: "image" },
+  { src: "/gallery/knossos-polis-2025.mp4", label: "Knossos 'POLIS' @ B London 2025", type: "video", poster: "/gallery/knossos-polis-2025-poster.webp" },
+  { src: "/gallery/rendezvous-club77-01.webp", label: "Live Guitar & DJ Set @ 77 London w/ Rendezvous", type: "image" },
+  { src: "/gallery/laurie-beechman-2026-01.webp", label: "Something Blue @ Laurie Beechman Theatre, April 2026", type: "image" },
+  { src: "/gallery/how-matcha-2026.webp", label: "Live @ How Matcha 2026", type: "image" },
+  { src: "/gallery/ziggys-2026-colour.webp", label: "Something Blue @ Ziggy's Roman Cafe, July 2026", type: "image" },
+  { src: "/gallery/canvas-guitar-solo.mp4", label: "Canvas Guitar Solo", type: "video", poster: "/gallery/canvas-guitar-solo-poster.webp" },
+  { src: "/gallery/bob-and-barbs-2026-01.webp", label: "Something Blue @ Bob & Barbs, March 2026", type: "image" },
+  { src: "/gallery/city-winery-2025-02.webp", label: "Something Blue @ City Winery 2025", type: "image" },
+  { src: "/gallery/soho-live-2026-02.webp", label: "Something Blue @ Soho Live, August 2026", type: "image" },
+  { src: "/gallery/rendezvous-club77-02.webp", label: "Live Guitar & DJ Set @ 77 London w/ Rendezvous", type: "image" },
+  { src: "/gallery/philadelphia-2026.webp", label: "Something Blue @ Philadelphia, April 2026", type: "image" },
+  { src: "/gallery/rendezvous-club77-clip-01.mp4", label: "Live Guitar & DJ Set @ 77 London w/ Rendezvous", type: "video", poster: "/gallery/rendezvous-club77-clip-01-poster.webp" },
+  { src: "/gallery/jivan-calderone-ibiza-2025.webp", label: "Santiago & Jivan Calderone, Ibiza 2025", type: "image" },
+  { src: "/gallery/theata-london-02.webp", label: "Live at 'THEATA' London", type: "image" },
+  { src: "/gallery/knossos-aphrodite-2025.mp4", label: "Knossos 'APHRODITE' @ Gallery 2025", type: "video", poster: "/gallery/knossos-aphrodite-2025-poster.webp" },
+  { src: "/gallery/archive-01.webp", label: "", type: "image" },
+  { src: "/gallery/ziggys-2026-bw.webp", label: "Something Blue @ Ziggy's Roman Cafe, July 2026", type: "image" },
+  { src: "/gallery/school-of-rock-2018.webp", label: "School of Rock the Musical, 2018", type: "image" },
+  { src: "/gallery/laurie-beechman-2026-02.webp", label: "Something Blue @ Laurie Beechman Theatre, April 2026", type: "image" },
+  { src: "/gallery/rendezvous-club77-03.webp", label: "Live Guitar & DJ Set @ 77 London w/ Rendezvous", type: "image" },
+  { src: "/gallery/bob-and-barbs-2026-02.webp", label: "Something Blue @ Bob & Barbs, March 2026", type: "image" },
+  { src: "/gallery/rendezvous-club77-clip-02.mp4", label: "Live Guitar & DJ Set @ 77 London w/ Rendezvous", type: "video", poster: "/gallery/rendezvous-club77-clip-02-poster.webp" },
+  { src: "/gallery/soho-live-2026-03.webp", label: "Something Blue @ Soho Live, August 2026", type: "image" },
+  { src: "/gallery/bitter-end-2023.webp", label: "Live @ The Bitter End w/ Richie Cannata 2023", type: "image" },
+  { src: "/gallery/city-winery-2025-01.webp", label: "Something Blue @ City Winery 2025", type: "image" },
 ];
 
 export default function Gallery() {
@@ -70,6 +78,7 @@ export default function Gallery() {
             src={item.src}
             label={item.label}
             type={item.type}
+            poster={item.poster}
             isHovered={hoveredIndex === i}
             onMouseEnter={() => setHoveredIndex(i)}
             onMouseLeave={() => setHoveredIndex(null)}
