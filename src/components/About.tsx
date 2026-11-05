@@ -34,9 +34,9 @@ export default function About() {
               <span>
                 December (date TBA): Live Music &amp; Comedy with Ahmed Alsibai, London
               </span>
-              <span>
+              <a href="https://aftontickets.com/event/buyticket/57jml1o89v/new-years-eve-eve-party-w-something-blue-impressions-jessica-woodlee" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
                 30 December: Something Blue at Arlene&apos;s Grocery, New York
-              </span>
+              </a>
             </div>
           </div>
         </div>
@@ -76,9 +76,9 @@ export default function About() {
             <span>
               December (date TBA): Live Music &amp; Comedy with Ahmed Alsibai, London
             </span>
-            <span>
+            <a href="https://aftontickets.com/event/buyticket/57jml1o89v/new-years-eve-eve-party-w-something-blue-impressions-jessica-woodlee" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
               30 December: Something Blue at Arlene&apos;s Grocery, New York
-            </span>
+            </a>
           </div>
         </div>
       </div>
