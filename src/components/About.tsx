@@ -18,6 +18,27 @@ export default function About() {
             15,000 at Live at Chelsea, and shows scattered across London and
             Europe.
           </p>
+
+          {/* Upcoming Events (desktop only) */}
+          <div className="hidden lg:block mt-6">
+            <h3 className="text-xl lg:text-2xl font-medium uppercase leading-[1.1] tracking-tight text-foreground">
+              Upcoming Events
+            </h3>
+            <div className="mt-2 flex flex-col gap-3 text-xs font-medium uppercase tracking-widest leading-relaxed text-foreground-secondary">
+              <a href="https://casa.fm/events/eventPage/ahmed-alsibai-prsents-220-bowery" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
+                14 November: Live Music &amp; Comedy with Ahmed Alsibai at 220 Bowery, New York
+              </a>
+              <a href="https://casa.fm/events/eventPage/knossos-presents-xxx-at-the-scotch-of-st-james" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
+                26 November: Knossos Presents: EXODOS at Scotch of St James, London
+              </a>
+              <span>
+                December (date TBA): Live Music &amp; Comedy with Ahmed Alsibai, London
+              </span>
+              <span>
+                30 December: Something Blue at Arlene&apos;s Grocery, New York
+              </span>
+            </div>
+          </div>
         </div>
 
         {/* Right — Paragraph (desktop only) */}
@@ -39,6 +60,27 @@ export default function About() {
           he co-founded Knossos Music. The label exists for the stuff that
           doesn&apos;t fit anywhere else.
         </p>
+
+        {/* Upcoming Events (mobile only) */}
+        <div className="lg:hidden mt-6">
+          <h3 className="text-xl font-medium uppercase leading-[1.1] tracking-tight text-foreground">
+            Upcoming Events
+          </h3>
+          <div className="mt-2 flex flex-col gap-3 text-xs font-medium uppercase tracking-widest leading-relaxed text-foreground-secondary">
+            <a href="https://casa.fm/events/eventPage/ahmed-alsibai-prsents-220-bowery" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
+              14 November: Live Music &amp; Comedy with Ahmed Alsibai at 220 Bowery, New York
+            </a>
+            <a href="https://casa.fm/events/eventPage/knossos-presents-xxx-at-the-scotch-of-st-james" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
+              26 November: Knossos Presents: EXODOS at Scotch of St James, London
+            </a>
+            <span>
+              December (date TBA): Live Music &amp; Comedy with Ahmed Alsibai, London
+            </span>
+            <span>
+              30 December: Something Blue at Arlene&apos;s Grocery, New York
+            </span>
+          </div>
+        </div>
       </div>
 
       {/* Center — Image carousel */}
