@@ -25,14 +25,11 @@ export default function About() {
               Upcoming Events
             </h3>
             <div className="mt-2 flex flex-col gap-3 text-xs font-medium uppercase tracking-widest leading-relaxed text-foreground-secondary">
-              <a href="https://casa.fm/events/eventPage/ahmed-alsibai-prsents-220-bowery" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
-                14 November: Live Music &amp; Comedy with Ahmed Alsibai at 220 Bowery, New York
-              </a>
               <a href="https://casa.fm/events/eventPage/knossos-presents-xxx-at-the-scotch-of-st-james" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
                 26 November: Knossos Presents: EXODOS at Scotch of St James, London
               </a>
               <span>
-                December (date TBA): Live Music &amp; Comedy with Ahmed Alsibai, London
+                19 December: Live Music &amp; Comedy with Ahmed Alsibai at Etcetera Theatre, London
               </span>
               <a href="https://aftontickets.com/event/buyticket/57jml1o89v/new-years-eve-eve-party-w-something-blue-impressions-jessica-woodlee" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
                 30 December: Something Blue at Arlene&apos;s Grocery, New York
@@ -67,14 +64,11 @@ export default function About() {
             Upcoming Events
           </h3>
           <div className="mt-2 flex flex-col gap-3 text-xs font-medium uppercase tracking-widest leading-relaxed text-foreground-secondary">
-            <a href="https://casa.fm/events/eventPage/ahmed-alsibai-prsents-220-bowery" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
-              14 November: Live Music &amp; Comedy with Ahmed Alsibai at 220 Bowery, New York
-            </a>
             <a href="https://casa.fm/events/eventPage/knossos-presents-xxx-at-the-scotch-of-st-james" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
               26 November: Knossos Presents: EXODOS at Scotch of St James, London
             </a>
             <span>
-              December (date TBA): Live Music &amp; Comedy with Ahmed Alsibai, London
+              19 December: Live Music &amp; Comedy with Ahmed Alsibai at Etcetera Theatre, London
             </span>
             <a href="https://aftontickets.com/event/buyticket/57jml1o89v/new-years-eve-eve-party-w-something-blue-impressions-jessica-woodlee" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
               30 December: Something Blue at Arlene&apos;s Grocery, New York
